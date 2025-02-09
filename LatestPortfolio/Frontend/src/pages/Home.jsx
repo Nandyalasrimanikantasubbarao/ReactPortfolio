@@ -1,4 +1,4 @@
-import HomeScene from "../Componets/Spines/HomeScene";
+import HomeScene from "../Components/Spines/HomeScene";
 import "./Home.css";
 
 function Home() {
