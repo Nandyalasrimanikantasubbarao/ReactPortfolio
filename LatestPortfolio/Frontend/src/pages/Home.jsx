@@ -1,22 +1,19 @@
 import HomeScene from "../Components/Spines/HomeScene";
-import "./Home.css";
+import NameScene from "../Components/Spines/NameScene";
 
 function Home() {
   return (
-    <>
-      <div className="grid min-h-full grid-cols-2 place-items-center">
+    <div>
+      <div className="place-items-center">
         {/* <div className="flex items-center justify-center">
           <div className="grid grid-cols-2 p-12"> */}
         <div>
-          <h1>Manikanta</h1>
+          <NameScene />
+          {/* <HomeScene /> */}
         </div>
-        <div className="absolute top-10">
-          <HomeScene />
-        </div>
+        <div className="z-10"></div>
       </div>
-      {/* </div>
-      </div> */}
-    </>
+    </div>
   );
 }
 
