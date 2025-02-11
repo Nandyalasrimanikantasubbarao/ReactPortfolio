@@ -1,17 +1,13 @@
-import HomeScene from "../Components/Spines/HomeScene";
+import NameHeader from "../Components/NameHeader";
 import NameScene from "../Components/Spines/NameScene";
 
 function Home() {
   return (
-    <div>
+    <div className="bg-black-400 container -z-10 mt-10 h-[37rem] w-screen overflow-hidden">
       <div className="place-items-center">
-        {/* <div className="flex items-center justify-center">
-          <div className="grid grid-cols-2 p-12"> */}
-        <div>
-          <NameScene />
-          {/* <HomeScene /> */}
+        <div className="pointer-events-none absolute left-20 top-2">
+          <NameHeader />
         </div>
-        <div className="z-10"></div>
       </div>
     </div>
   );
