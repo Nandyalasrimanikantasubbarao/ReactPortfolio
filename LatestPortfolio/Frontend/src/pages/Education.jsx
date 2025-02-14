@@ -1,5 +1,9 @@
 function Education() {
-  return <div>hello from Education</div>;
+  return (
+    <div className="relative z-20 h-[50rem] overflow-hidden">
+      hello from Education
+    </div>
+  );
 }
 
 export default Education;

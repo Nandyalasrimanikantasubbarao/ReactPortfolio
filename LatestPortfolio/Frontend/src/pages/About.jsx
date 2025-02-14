@@ -3,7 +3,7 @@ import PufferFishScene from "../Components/Spines/PufferFishScene";
 
 function About() {
   return (
-    <section className="relative z-20 h-[50rem] overflow-hidden bg-amber-400">
+    <section className="relative z-20 -mt-[95px] h-[50rem] overflow-hidden bg-amber-400">
       <h2 className="py-16 text-center text-5xl font-bold uppercase text-white">
         About
       </h2>

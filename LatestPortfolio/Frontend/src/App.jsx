@@ -1,7 +1,7 @@
 import AppLayout from "./AppLayout";
 
 function App() {
-  return <AppLayout />;
+  return <AppLayout className="overflow-hidden" />;
 }
 
 export default App;

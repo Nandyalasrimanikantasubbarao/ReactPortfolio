@@ -1,5 +1,4 @@
 import NameHeader from "../Components/NameHeader";
-import NameScene from "../Components/Spines/NameScene";
 
 function Home() {
   return (
