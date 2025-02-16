@@ -16,7 +16,7 @@ const projects = [
     description:
       "Restorent Application done by using HTML,CSS and basic JavaScript.",
     image: "/project2.png",
-    link: "#",
+    link: "https://omnifood-manikanta1.netlify.app/",
   },
   {
     title: "Project Three",
@@ -43,7 +43,7 @@ function ProjectsSlides() {
   return (
     <div className="relative mx-auto w-[22rem]">
       {/* Project Slide */}
-      <div className="h-[30rem] w-[22rem] transform overflow-hidden rounded-2xl bg-white shadow-lg transition-transform">
+      <div className="h-[28rem] w-[22rem] transform overflow-hidden rounded-2xl bg-white shadow-lg transition-transform">
         <img
           src={projects[currentIndex].image}
           alt={projects[currentIndex].title}

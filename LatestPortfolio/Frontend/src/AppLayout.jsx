@@ -5,6 +5,7 @@ import NameScene from "./Components/Spines/NameScene";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Education from "./pages/Education";
+import Footer from "./pages/Footer";
 
 function AppLayout() {
   return (
@@ -20,6 +21,7 @@ function AppLayout() {
       <Skills />
       <Projects />
       <Education />
+      <Footer />
     </div>
   );
 }
