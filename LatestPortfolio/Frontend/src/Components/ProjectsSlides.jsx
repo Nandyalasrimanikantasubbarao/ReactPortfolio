@@ -3,12 +3,20 @@ import { HiArrowLeftCircle, HiArrowRightCircle } from "react-icons/hi2";
 
 const projects = [
   {
+    title: "Latest Portfolio",
+    technology: ["JSX", "Tailwind.css", "React", "Spline"],
+    description:
+      "A modern portfolio website built using React, JSX, Tailwind CSS, and Spline. It features an interactive 3D experience with smooth transitions, and a visually engaging design. ",
+    image: "/project4.png",
+    link: "#",
+  },
+  {
     title: "Old portfolio",
     technology: ["HTML", "CSS", "JavaScript"],
     description:
       "My old portfolio website. This is the first website that I built entirely from scratch, and it's my favorite one 💖.",
     image: "/project1.png",
-    link: "#",
+    link: "https://srimanikanta.me",
   },
   {
     title: "Restorent Application",
@@ -19,11 +27,12 @@ const projects = [
     link: "https://omnifood-manikanta1.netlify.app/",
   },
   {
-    title: "Project Three",
-    technology: ["HTML", "CSS", "JavaScript"],
-    description: "A brief description of project three.",
-    image: "/assets/project3.png",
-    link: "#",
+    title: "Movie List and Reviews",
+    technology: ["JSX", "CSS", "React"],
+    description:
+      "A Movie List and Reviews Application where users can search for movies, write and read reviews.",
+    image: "/project3.png",
+    link: "https://movielist-one.vercel.app/",
   },
 ];
 
@@ -45,9 +54,9 @@ function ProjectsSlides() {
       {/* Project Slide */}
       <div className="h-[28rem] w-[22rem] transform overflow-hidden rounded-2xl bg-white shadow-lg transition-transform">
         <img
+          className="h-48 rounded-lg object-cover p-2"
           src={projects[currentIndex].image}
           alt={projects[currentIndex].title}
-          className="m-2 h-48 object-cover"
         />
         <div className="p-4">
           <h3 className="text-xl font-semibold text-gray-900">
@@ -57,7 +66,7 @@ function ProjectsSlides() {
             {projects[currentIndex].technology.map((tech, index) => (
               <li
                 key={index}
-                className="rounded bg-gray-200 px-2 py-1 text-sm font-medium text-gray-800"
+                className={`rounded ${tech === "React" ? "bg-cyan-300" : "bg-gray-300"} px-2 py-1 text-sm font-medium text-gray-800`}
               >
                 {tech}
               </li>

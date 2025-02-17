@@ -1,27 +1,43 @@
-import Navbar from "./Components/Navbar";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NameScene from "./Components/Spines/NameScene";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Education from "./pages/Education";
-import Footer from "./pages/Footer";
+import { Suspense, lazy } from "react";
+import FramerMotion from "./Components/FramerMotion";
+
+// Lazy load components
+const Navbar = lazy(() => import("./Components/Navbar"));
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const NameScene = lazy(() => import("./Components/Spines/NameScene"));
+const Skills = lazy(() => import("./pages/Skills"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Education = lazy(() => import("./pages/Education"));
+const Footer = lazy(() => import("./pages/Footer"));
 
 function AppLayout() {
   return (
     <div className="overflow-hidden">
-      <div>
+      <Suspense fallback={<div className="text-center">Loading...</div>}>
         <div>
-          <NameScene />
+          <div>
+            <NameScene />
+          </div>
+          <Navbar />
+          <Home />
         </div>
-        <Navbar />
-        <Home />
-      </div>
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Footer />
+        <FramerMotion>
+          <About />
+        </FramerMotion>
+        <FramerMotion>
+          <Skills />
+        </FramerMotion>
+        <FramerMotion>
+          <Projects />
+        </FramerMotion>
+        <FramerMotion>
+          <Education />
+        </FramerMotion>
+        <FramerMotion>
+          <Footer />
+        </FramerMotion>
+      </Suspense>
     </div>
   );
 }

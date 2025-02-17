@@ -2,12 +2,11 @@ import NameHeader from "../Components/NameHeader";
 
 function Home() {
   return (
-    <div className="bg-black-400 container -z-10 mt-10 h-[37rem] w-screen overflow-hidden">
-      <div className="place-items-center">
-        <div className="pointer-events-none absolute left-20 top-2">
-          <NameHeader />
-        </div>
-      </div>
+    <div
+      id="home"
+      className="pointer-events-none relative mt-10 h-[37rem] w-screen"
+    >
+      <NameHeader />
     </div>
   );
 }

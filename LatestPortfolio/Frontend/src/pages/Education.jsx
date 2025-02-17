@@ -1,11 +1,6 @@
 import { useState } from "react";
 import EducationSpline from "../Components/Spines/EducationSpline";
-import {
-  HiArrowLeftCircle,
-  HiArrowRightCircle,
-  HiChevronLeft,
-  HiChevronRight,
-} from "react-icons/hi2";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 const education = [
   {
@@ -38,7 +33,7 @@ function Education() {
   };
 
   return (
-    <div className="relative -mt-4 h-[50rem] overflow-hidden">
+    <div id="education" className="relative -mt-4 h-[50rem] overflow-hidden">
       <div className="absolute left-20 top-1/3 z-30 mx-auto w-[24rem] -skew-x-12">
         <h1 className="- absolute -top-[90%] left-full ml-32 skew-x-12 text-5xl font-bold uppercase text-white">
           Education
