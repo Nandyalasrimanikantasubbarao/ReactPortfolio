@@ -1,5 +1,4 @@
 import PufferFishScene from "../Components/Spines/PufferFishScene";
-import Connectivity from "../Components/Connectivity";
 
 function About() {
   return (

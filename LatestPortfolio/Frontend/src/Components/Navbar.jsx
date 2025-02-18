@@ -4,14 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
 
-const navigationLinks = [
-  "home",
-  "about",
-  "skills",
-  "projects",
-  "education",
-  "contact",
-];
+const navigationLinks = ["home", "about", "skills", "projects", "education"];
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);

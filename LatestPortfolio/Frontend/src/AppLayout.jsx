@@ -1,5 +1,6 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState } from "react";
 import FramerMotion from "./Components/FramerMotion";
+import ContactForm from "./pages/Contactform";
 
 // Lazy load components
 const Navbar = lazy(() => import("./Components/Navbar"));
@@ -12,6 +13,12 @@ const Education = lazy(() => import("./pages/Education"));
 const Footer = lazy(() => import("./pages/Footer"));
 
 function AppLayout() {
+  const [open, setOpen] = useState(false);
+
+  function handelOpen() {
+    setOpen(() => !open);
+  }
+
   return (
     <div className="overflow-hidden">
       <Suspense fallback={<div className="text-center">Loading...</div>}>
@@ -20,7 +27,7 @@ function AppLayout() {
             <NameScene />
           </div>
           <Navbar />
-          <Home />
+          <Home value={handelOpen} />
         </div>
         <FramerMotion>
           <About />
@@ -37,6 +44,7 @@ function AppLayout() {
         <FramerMotion>
           <Footer />
         </FramerMotion>
+        {open && <ContactForm value={handelOpen} />}
       </Suspense>
     </div>
   );

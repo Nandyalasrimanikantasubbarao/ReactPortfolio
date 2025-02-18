@@ -1,12 +1,12 @@
 import NameHeader from "../Components/NameHeader";
 
-function Home() {
+function Home({ value }) {
   return (
     <div
       id="home"
       className="pointer-events-none relative mt-10 h-[37rem] w-screen"
     >
-      <NameHeader />
+      <NameHeader value={value} />
     </div>
   );
 }

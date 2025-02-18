@@ -1,6 +1,3 @@
-import { IoIosMail } from "react-icons/io";
-import { CiLinkedin } from "react-icons/ci";
-import { FaGithub } from "react-icons/fa";
 import Connectivity from "../Components/Connectivity";
 const date = new Date();
 const year = date.getFullYear() + 1;
