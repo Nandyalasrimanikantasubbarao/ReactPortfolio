@@ -16,7 +16,7 @@ const projects = [
     description:
       "My old portfolio website. This is the first website that I built entirely from scratch, and it's my favorite one 💖.",
     image: "/project1.png",
-    link: "https://srimanikanta.me",
+    link: "https://manikantaoldportfolio.netlify.app/",
   },
   {
     title: "Restorent Application",
@@ -75,14 +75,20 @@ function ProjectsSlides() {
           <p className="mt-2 text-gray-600">
             {projects[currentIndex].description}
           </p>
-          <a
-            href={projects[currentIndex].link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block rounded-lg bg-orange-300 px-4 py-2 font-semibold text-white transition-all duration-200 hover:bg-orange-400"
-          >
-            View Project
-          </a>
+          {projects[currentIndex].link === "#" ? (
+            <button className="mt-4 inline-block rounded-lg bg-orange-300 px-4 py-2 font-semibold text-white transition-all duration-200 hover:bg-orange-400">
+              cureely viewing
+            </button>
+          ) : (
+            <a
+              href={projects[currentIndex].link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block rounded-lg bg-orange-300 px-4 py-2 font-semibold text-white transition-all duration-200 hover:bg-orange-400"
+            >
+              view project
+            </a>
+          )}
         </div>
       </div>
 
