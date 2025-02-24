@@ -1,8 +1,10 @@
-import React from "react";
 import { isMobile, isTablet } from "react-device-detect";
 import AppLayout from "./AppLayout";
+import { useState } from "react";
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   if (isMobile || isTablet) {
     return (
       <div className="flex h-screen items-center justify-center bg-gray-100 text-center">
@@ -15,7 +17,7 @@ function App() {
     );
   }
 
-  return <AppLayout className="overflow-hidden" />;
+  return <AppLayout className="overflow-hidden" setIsLoaded={setIsLoaded} />;
 }
 
 export default App;
