@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiArrowLeftCircle, HiArrowRightCircle } from "react-icons/hi2";
 
 const projects = [
@@ -38,6 +38,13 @@ const projects = [
 
 function ProjectsSlides() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(true);
+  useEffect(() => {
+    projects.forEach((project) => {
+      const img = new Image();
+      img.src = project.image;
+    });
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
@@ -57,6 +64,8 @@ function ProjectsSlides() {
           className="h-48 rounded-lg object-cover p-2"
           src={projects[currentIndex].image}
           alt={projects[currentIndex].title}
+          style={{ filter: imageLoaded ? "blur(0px)" : "blur(8px)" }}
+          onLoad={() => setImageLoaded(true)}
         />
         <div className="p-4">
           <h3 className="text-xl font-semibold text-gray-900">
